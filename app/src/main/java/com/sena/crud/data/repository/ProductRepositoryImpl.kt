@@ -25,4 +25,14 @@ class ProductRepositoryImpl @Inject constructor(
         val response = api.updateProduct(id, request)
         return response.toDomain()
     }
+
+    override suspend fun getAllProducts(): List<ProductModel> {
+        val response = api.getAllProducts()
+        return response.products.map { it.toDomain() }
+    }
+
+    override suspend fun deleteProduct(id: Int): Boolean {
+        val response = api.deleteProduct(id)
+        return response.isDeleted
+    }
 }
