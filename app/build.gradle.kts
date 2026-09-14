@@ -38,6 +38,7 @@ android {
 }
 
 dependencies {
+    implementation(libs.androidx.compose.material.icons.core)
     implementation(libs.hilt.android)
     ksp(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
@@ -45,7 +46,7 @@ dependencies {
     implementation(libs.retrofit.converter.moshi)
     implementation(libs.moshi.core)
     ksp(libs.moshi.kotlin.codegen)
-
+    implementation(libs.navigation.compose)
     implementation(platform(libs.androidx.compose.bom))
     implementation(libs.androidx.activity.compose)
     implementation(libs.androidx.compose.material3)
