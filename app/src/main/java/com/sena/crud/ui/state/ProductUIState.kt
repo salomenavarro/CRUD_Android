@@ -7,6 +7,7 @@ data class ProductUIState(
     val product: ProductModel? = null,
     val errorMessage: String? = null,
     val isUpdating: Boolean = false,
-    val updateSuccess: Boolean = false
+    val updateSuccess: Boolean = false,
+    val isDeleting: Boolean = false,
+    val deleteSuccess: Boolean = false
 )
-
